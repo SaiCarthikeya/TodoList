@@ -1,0 +1,205 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* Header as top navbar */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.heading {
+    font-size: 32px;
+    color: #333;
+    letter-spacing: 8px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.heading span.green {
+    color: #28a745;
+}
+
+/* Form and task list container */
+.body-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px; /* To offset from fixed header */
+    width: 100%;
+}
+
+.add-item {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.add-item-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+input[type="text"], input[type="date"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #28a745;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* List styles */
+.list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.list-item {
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.list-item:hover {
+    background-color: #e9ecef;
+}
+
+.task-name {
+    font-size: 16px;
+    flex: 1;
+    margin: 4px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #333;
+}
+
+.task-name.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.delete {
+    background-color: #dc3545;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}
+
+.complete-btn {
+    color: #28a745; /* Green color for complete button */
+    color: white;
+}
+
+.complete-btn.completed-btn {
+    background-color: #6c757d; /* Gray color for completed state */
+    color: white;
+}
+
+.list-item.completed .task-name {
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+.complete-btn:hover {
+    background-color: #218838;
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 500px) {
+    .add-item, .list-items {
+        max-width: 90%;
+    }
+
+    .flex {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}

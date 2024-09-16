@@ -1,8 +1,9 @@
+import TodoList from './components/TodoList'
 import './App.css';
 
 function App() {
   return (
-    <h1>yoo</h1>
+    <TodoList />
   );
 }
 
